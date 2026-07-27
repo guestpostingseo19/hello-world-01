@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { getService, services } from "@/data/services";
+import { getService, services, type Service } from "@/data/services";
 import { posts } from "@/data/blog";
 import { images } from "@/components/site/images";
 import {
@@ -14,7 +14,7 @@ import {
 } from "@/components/site/ui";
 
 export const Route = createFileRoute("/services/$service/")({
-  loader: ({ params }) => {
+  loader: ({ params }): { service: Service } => {
     const service = getService(params.service);
     if (!service) throw notFound();
     return { service };
