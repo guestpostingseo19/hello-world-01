@@ -9,38 +9,327 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TestimonialsRouteImport } from './routes/testimonials'
+import { Route as TermsAndConditionsRouteImport } from './routes/terms-and-conditions'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as HtmlSitemapRouteImport } from './routes/html-sitemap'
+import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as DisclaimerRouteImport } from './routes/disclaimer'
+import { Route as CookiePolicyRouteImport } from './routes/cookie-policy'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ServicesIndexRouteImport } from './routes/services.index'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as ServicesServiceIndexRouteImport } from './routes/services.$service.index'
+import { Route as ServicesServiceSubRouteImport } from './routes/services.$service.$sub'
 
+const TestimonialsRoute = TestimonialsRouteImport.update({
+  id: '/testimonials',
+  path: '/testimonials',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsAndConditionsRoute = TermsAndConditionsRouteImport.update({
+  id: '/terms-and-conditions',
+  path: '/terms-and-conditions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HtmlSitemapRoute = HtmlSitemapRouteImport.update({
+  id: '/html-sitemap',
+  path: '/html-sitemap',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DisclaimerRoute = DisclaimerRouteImport.update({
+  id: '/disclaimer',
+  path: '/disclaimer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CookiePolicyRoute = CookiePolicyRouteImport.update({
+  id: '/cookie-policy',
+  path: '/cookie-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesIndexRoute = ServicesIndexRouteImport.update({
+  id: '/services/',
+  path: '/services/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesServiceIndexRoute = ServicesServiceIndexRouteImport.update({
+  id: '/services/$service/',
+  path: '/services/$service/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesServiceSubRoute = ServicesServiceSubRouteImport.update({
+  id: '/services/$service/$sub',
+  path: '/services/$service/$sub',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/cookie-policy': typeof CookiePolicyRoute
+  '/disclaimer': typeof DisclaimerRoute
+  '/faq': typeof FaqRoute
+  '/gallery': typeof GalleryRoute
+  '/html-sitemap': typeof HtmlSitemapRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/terms-and-conditions': typeof TermsAndConditionsRoute
+  '/testimonials': typeof TestimonialsRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/blog/': typeof BlogIndexRoute
+  '/services/': typeof ServicesIndexRoute
+  '/services/$service/$sub': typeof ServicesServiceSubRoute
+  '/services/$service/': typeof ServicesServiceIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/cookie-policy': typeof CookiePolicyRoute
+  '/disclaimer': typeof DisclaimerRoute
+  '/faq': typeof FaqRoute
+  '/gallery': typeof GalleryRoute
+  '/html-sitemap': typeof HtmlSitemapRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/terms-and-conditions': typeof TermsAndConditionsRoute
+  '/testimonials': typeof TestimonialsRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/blog': typeof BlogIndexRoute
+  '/services': typeof ServicesIndexRoute
+  '/services/$service/$sub': typeof ServicesServiceSubRoute
+  '/services/$service': typeof ServicesServiceIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/cookie-policy': typeof CookiePolicyRoute
+  '/disclaimer': typeof DisclaimerRoute
+  '/faq': typeof FaqRoute
+  '/gallery': typeof GalleryRoute
+  '/html-sitemap': typeof HtmlSitemapRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/terms-and-conditions': typeof TermsAndConditionsRoute
+  '/testimonials': typeof TestimonialsRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/blog/': typeof BlogIndexRoute
+  '/services/': typeof ServicesIndexRoute
+  '/services/$service/$sub': typeof ServicesServiceSubRoute
+  '/services/$service/': typeof ServicesServiceIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/cookie-policy'
+    | '/disclaimer'
+    | '/faq'
+    | '/gallery'
+    | '/html-sitemap'
+    | '/privacy-policy'
+    | '/sitemap.xml'
+    | '/terms-and-conditions'
+    | '/testimonials'
+    | '/blog/$slug'
+    | '/blog/'
+    | '/services/'
+    | '/services/$service/$sub'
+    | '/services/$service/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/cookie-policy'
+    | '/disclaimer'
+    | '/faq'
+    | '/gallery'
+    | '/html-sitemap'
+    | '/privacy-policy'
+    | '/sitemap.xml'
+    | '/terms-and-conditions'
+    | '/testimonials'
+    | '/blog/$slug'
+    | '/blog'
+    | '/services'
+    | '/services/$service/$sub'
+    | '/services/$service'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/cookie-policy'
+    | '/disclaimer'
+    | '/faq'
+    | '/gallery'
+    | '/html-sitemap'
+    | '/privacy-policy'
+    | '/sitemap.xml'
+    | '/terms-and-conditions'
+    | '/testimonials'
+    | '/blog/$slug'
+    | '/blog/'
+    | '/services/'
+    | '/services/$service/$sub'
+    | '/services/$service/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  ContactRoute: typeof ContactRoute
+  CookiePolicyRoute: typeof CookiePolicyRoute
+  DisclaimerRoute: typeof DisclaimerRoute
+  FaqRoute: typeof FaqRoute
+  GalleryRoute: typeof GalleryRoute
+  HtmlSitemapRoute: typeof HtmlSitemapRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  TermsAndConditionsRoute: typeof TermsAndConditionsRoute
+  TestimonialsRoute: typeof TestimonialsRoute
+  BlogSlugRoute: typeof BlogSlugRoute
+  BlogIndexRoute: typeof BlogIndexRoute
+  ServicesIndexRoute: typeof ServicesIndexRoute
+  ServicesServiceSubRoute: typeof ServicesServiceSubRoute
+  ServicesServiceIndexRoute: typeof ServicesServiceIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/testimonials': {
+      id: '/testimonials'
+      path: '/testimonials'
+      fullPath: '/testimonials'
+      preLoaderRoute: typeof TestimonialsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms-and-conditions': {
+      id: '/terms-and-conditions'
+      path: '/terms-and-conditions'
+      fullPath: '/terms-and-conditions'
+      preLoaderRoute: typeof TermsAndConditionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/html-sitemap': {
+      id: '/html-sitemap'
+      path: '/html-sitemap'
+      fullPath: '/html-sitemap'
+      preLoaderRoute: typeof HtmlSitemapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/disclaimer': {
+      id: '/disclaimer'
+      path: '/disclaimer'
+      fullPath: '/disclaimer'
+      preLoaderRoute: typeof DisclaimerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cookie-policy': {
+      id: '/cookie-policy'
+      path: '/cookie-policy'
+      fullPath: '/cookie-policy'
+      preLoaderRoute: typeof CookiePolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,22 +337,63 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/': {
+      id: '/services/'
+      path: '/services'
+      fullPath: '/services/'
+      preLoaderRoute: typeof ServicesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/$service/': {
+      id: '/services/$service/'
+      path: '/services/$service'
+      fullPath: '/services/$service/'
+      preLoaderRoute: typeof ServicesServiceIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/$service/$sub': {
+      id: '/services/$service/$sub'
+      path: '/services/$service/$sub'
+      fullPath: '/services/$service/$sub'
+      preLoaderRoute: typeof ServicesServiceSubRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  ContactRoute: ContactRoute,
+  CookiePolicyRoute: CookiePolicyRoute,
+  DisclaimerRoute: DisclaimerRoute,
+  FaqRoute: FaqRoute,
+  GalleryRoute: GalleryRoute,
+  HtmlSitemapRoute: HtmlSitemapRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
+  TermsAndConditionsRoute: TermsAndConditionsRoute,
+  TestimonialsRoute: TestimonialsRoute,
+  BlogSlugRoute: BlogSlugRoute,
+  BlogIndexRoute: BlogIndexRoute,
+  ServicesIndexRoute: ServicesIndexRoute,
+  ServicesServiceSubRoute: ServicesServiceSubRoute,
+  ServicesServiceIndexRoute: ServicesServiceIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
