@@ -71,7 +71,7 @@ function HtmlSitemap() {
                 </Link>
               </h3>
               <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-                {s.subServices.map((sub) => (
+                {s.subs.map((sub) => (
                   <li key={sub.slug}>
                     <Link
                       to="/services/$service/$sub"

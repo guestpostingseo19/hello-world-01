@@ -26,7 +26,7 @@ export const Route = createFileRoute("/sitemap.xml")({
             priority: "0.8",
           })),
           ...services.flatMap((s) =>
-            s.subServices.map((sub) => ({
+            s.subs.map((sub) => ({
               path: `/services/${s.slug}/${sub.slug}`,
               changefreq: "monthly" as const,
               priority: "0.7",
