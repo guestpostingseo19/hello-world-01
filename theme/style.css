@@ -1,0 +1,165 @@
+/*
+Theme Name: PawlogicTech
+Theme URI: https://pawlogictech.com/
+Author: PawlogicTech
+Author URI: https://pawlogictech.com/
+Description: Premium WordPress theme for PawlogicTech, an AI-powered pet technology company. A pixel-faithful conversion of the PawlogicTech corporate website with health monitoring, behaviour analysis, training, smart care and safety service templates, a full blog, legal pages and complete SEO markup.
+Version: 1.0.0
+Requires at least: 6.2
+Tested up to: 6.7
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: pawlogictech
+Tags: business, portfolio, blog, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, right-sidebar, accessibility-ready
+*/
+
+/*
+ * The full design system lives in assets/css/theme.css (compiled from the original site).
+ * This file only carries the theme header plus the WordPress-specific presentation
+ * (alignments, comments, pagination, widgets) that the original static site did not need.
+ * It never overrides original page styling.
+ */
+
+.screen-reader-text {
+	position: absolute !important;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+.screen-reader-text:focus {
+	position: fixed !important;
+	top: 0.75rem;
+	left: 1rem;
+	z-index: 100;
+	width: auto;
+	height: auto;
+	clip: auto;
+	padding: 0.5rem 1rem;
+	background: var(--primary);
+	color: var(--primary-foreground);
+	border-radius: 0.5rem;
+}
+
+.alignwide {
+	max-width: 68rem;
+	margin-inline: auto;
+}
+
+.alignfull {
+	max-width: none;
+	margin-inline: calc(50% - 50vw);
+	width: 100vw;
+}
+
+.alignleft {
+	float: left;
+	margin: 0 1.5rem 1.5rem 0;
+}
+
+.alignright {
+	float: right;
+	margin: 0 0 1.5rem 1.5rem;
+}
+
+.aligncenter {
+	display: block;
+	margin-inline: auto;
+}
+
+.wp-caption-text,
+.wp-element-caption {
+	font-size: 0.875rem;
+	color: var(--muted-foreground);
+	margin-top: 0.5rem;
+}
+
+.sticky .pwt-sticky-flag {
+	display: inline-flex;
+}
+
+/* Comments and pagination reuse the design tokens, never new colours. */
+.pwt-comment-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.pwt-comment-list ol.children {
+	list-style: none;
+	margin: 1.5rem 0 0;
+	padding-left: 1.5rem;
+	border-left: 1px solid var(--border);
+}
+
+.pwt-comment-list li {
+	margin-top: 1.5rem;
+}
+
+.pwt-comment-body {
+	border: 1px solid var(--border);
+	background: var(--card);
+	border-radius: 1.5rem;
+	padding: 1.5rem 1.75rem;
+}
+
+.pwt-comment-body .comment-meta {
+	font-size: 0.8125rem;
+	color: var(--muted-foreground);
+	margin-bottom: 0.5rem;
+}
+
+.comment-respond input[type="text"],
+.comment-respond input[type="email"],
+.comment-respond input[type="url"],
+.comment-respond textarea,
+.pwt-search-field {
+	width: 100%;
+	border: 1px solid var(--border);
+	background: var(--card);
+	border-radius: 0.75rem;
+	padding: 0.75rem 1rem;
+	font: inherit;
+	font-size: 0.875rem;
+	color: var(--foreground);
+}
+
+.comment-respond .submit,
+.pwt-search-submit {
+	display: inline-flex;
+	align-items: center;
+	border-radius: 9999px;
+	background: var(--accent);
+	color: var(--accent-foreground);
+	padding: 0.75rem 1.75rem;
+	font-size: 0.875rem;
+	font-weight: 600;
+	border: 0;
+	cursor: pointer;
+	transition: transform 0.2s ease;
+}
+
+.comment-respond .submit:hover,
+.pwt-search-submit:hover {
+	transform: translateY(-2px);
+}
+
+.pwt-widget-area ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.pwt-widget-area li + li {
+	margin-top: 0.625rem;
+}
+
+.pwt-widget-area a:hover {
+	color: var(--accent);
+}
