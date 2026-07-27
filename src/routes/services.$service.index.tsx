@@ -76,7 +76,8 @@ export const Route = createFileRoute("/services/$service/")({
 });
 
 function ServicePage() {
-  const { service: s } = Route.useLoaderData();
+  const params = Route.useParams();
+  const s = getService(params.service) as Service;
   const related = services.filter((x) => x.slug !== s.slug).slice(0, 3);
   const relatedPosts = posts.slice(0, 3);
 

@@ -69,7 +69,9 @@ export const Route = createFileRoute("/services/$service/$sub")({
 });
 
 function SubServicePage() {
-  const { service, sub } = Route.useLoaderData();
+  const params = Route.useParams();
+  const service = getService(params.service) as Service;
+  const sub = getSub(service, params.sub) as SubService;
   const siblings = service.subs.filter((x) => x.slug !== sub.slug);
 
   return (

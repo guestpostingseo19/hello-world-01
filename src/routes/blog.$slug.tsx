@@ -72,7 +72,8 @@ export const Route = createFileRoute("/blog/$slug")({
 });
 
 function BlogPost() {
-  const { post: p } = Route.useLoaderData();
+  const { slug } = Route.useParams();
+  const p = getPost(slug) as Post;
   const related = posts.filter((x) => x.slug !== p.slug).slice(0, 3);
   const formatted = new Date(p.date).toLocaleDateString("en-GB", {
     day: "numeric",
